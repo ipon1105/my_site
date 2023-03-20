@@ -6,16 +6,16 @@
     <title>Фотоальбом</title>
     <script src="https://unpkg.com/vue@next"></script>
     
-    <link rel="stylesheet" href="src/css/general.css">
-    <link rel="stylesheet" href="src/css/time.css">
-    <link rel="stylesheet" href="src/css/modal_1.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/time.css">
+    <link rel="stylesheet" href="../css/modal_1.css">
     <!-- 
-    <script src="src/js/photoScript.js"></script>
+    <script src="../js/photoScript.js"></script>
     -->
-    <link rel="stylesheet" href="src/vue.css">
+    <link rel="stylesheet" href="../vue.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="src/js/time.js"></script>
-    <script src="src/js/localStorage.js"></script>
+    <script src="../js/time.js"></script>
+    <script src="../js/localStorage.js"></script>
     <style>
     </style>
 </head>
@@ -26,27 +26,27 @@
     <header>
         <div>
             <div class="local-story">
-                <img src="src/img/icon_1.png">
+                <img src="../img/icon_1.png">
                 <a href="History.html">История просмотра</a>
             </div>
             <h1 id="page">Фотоальбом</h1>
             <!-- Навигация с гиперссылками -->
             <nav>
                 <ul>
-                    <li onmouseover="document.getElementById('img_1').src='src/img/figure_01.png';"
-                        onmouseout="document.getElementById('img_1').src='src/img/figure_00.png';">
-                        <img id="img_1" src="src/img/figure_00.png" >
+                    <li onmouseover="document.getElementById('img_1').src='../img/figure_01.png';"
+                        onmouseout="document.getElementById('img_1').src='../img/figure_00.png';">
+                        <img id="img_1" src="../img/figure_00.png" >
                         <a href="MainPage.html">Главная страница</a>
                     </li>
-                    <li onmouseover="document.getElementById('img_2').src='src/img/figure_02.png';"
-                        onmouseout="document.getElementById('img_2').src='src/img/figure_01.png';">
-                        <img id="img_2" src="src/img/figure_01.png">
+                    <li onmouseover="document.getElementById('img_2').src='../img/figure_02.png';"
+                        onmouseout="document.getElementById('img_2').src='../img/figure_01.png';">
+                        <img id="img_2" src="../img/figure_01.png">
                         <a href="AboutMePage.html">Обо мне</a>
                     </li>
-                    <li onmouseover="document.getElementById('img_3').src='src/img/figure_03.png';"
-                        onmouseout="document.getElementById('img_3').src='src/img/figure_02.png';"
+                    <li onmouseover="document.getElementById('img_3').src='../img/figure_03.png';"
+                        onmouseout="document.getElementById('img_3').src='../img/figure_02.png';"
                         id="li_top_of_submenu" class="top_of_submenu">
-                        <img id="img_3" src="src/img/figure_02.png">
+                        <img id="img_3" src="../img/figure_02.png">
                         <a>Мои интересы </a>
                         <ul id="ul_submenu" class="submenu">
                             <li><a href="MyInterestingPage.html#my_1">Моя любимая музыка</a></li>
@@ -56,24 +56,24 @@
                             <li><a href="MyInterestingPage.html#my_5">Моя любимая</a> </li>
                         </ul>
                     </li>
-                    <li onmouseover="document.getElementById('img_4').src='src/img/figure_04.png';"
-                        onmouseout="document.getElementById('img_4').src='src/img/figure_03.png';">
-                        <img id="img_4" src="src/img/figure_03.png">
+                    <li onmouseover="document.getElementById('img_4').src='../img/figure_04.png';"
+                        onmouseout="document.getElementById('img_4').src='../img/figure_03.png';">
+                        <img id="img_4" src="../img/figure_03.png">
                         <a href="StudiesPage.html">Учёба</a>
                     </li>
-                    <li onmouseover="document.getElementById('img_5').src='src/img/figure_05.png';"
-                        onmouseout="document.getElementById('img_5').src='src/img/figure_05.png';">
-                        <img id="img_5" src="src/img/figure_05.png">
+                    <li onmouseover="document.getElementById('img_5').src='../img/figure_05.png';"
+                        onmouseout="document.getElementById('img_5').src='../img/figure_05.png';">
+                        <img id="img_5" src="../img/figure_05.png">
                         <a href="PhotoAlbomPage.html">Фотоальбом</a>
                     </li>
-                    <li onmouseover="document.getElementById('img_6').src='src/img/figure_06.png';"
-                        onmouseout="document.getElementById('img_6').src='src/img/figure_05.png';">
-                        <img id="img_6" src="src/img/figure_05.png">
+                    <li onmouseover="document.getElementById('img_6').src='../img/figure_06.png';"
+                        onmouseout="document.getElementById('img_6').src='../img/figure_05.png';">
+                        <img id="img_6" src="../img/figure_05.png">
                         <a href="ContactsPage.html">Контакт</a>
                     </li>
-                    <li onmouseover="document.getElementById('img_7').src='src/img/figure_07.png';"
-                        onmouseout="document.getElementById('img_7').src='src/img/figure_06.png';">
-                        <img id="img_7" src="src/img/figure_06.png">
+                    <li onmouseover="document.getElementById('img_7').src='../img/figure_07.png';"
+                        onmouseout="document.getElementById('img_7').src='../img/figure_06.png';">
+                        <img id="img_7" src="../img/figure_06.png">
                         <a href="TestPage.html">Тест по дисциплине</a>
                     </li>
                 </ul>
@@ -83,17 +83,80 @@
 
     <!--Главное содержимое-->
     <main id="main">
-
-        <!-- VUE -->
-        <div id="app">
-            <div class="album">
-                <album-item v-for="(photo,i) in photos" :key="i" :package="photo" @click="index = i"></album-item>
-            </div>
-            <img-popup v-if="index !== -1" :photos="photos" :index="index" @close="index=-1">
-            </img-popup>
-        </div>
-        <script src="src/vue.js"></script>
-       
+            
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td><figure>
+                            <img src="../img/icon_1.png" title="icon 1">
+                            <figcaption>icon 1</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_2.png" title="icon 2">
+                            <figcaption>icon 2</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_3.png" title="icon 3">
+                            <figcaption>icon 3</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_4.png" title="icon 4">
+                            <figcaption>icon 4</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_5.png" title="icon 5">
+                            <figcaption>icon 5</figcaption>
+                        </figure></td>
+                    </tr>
+                    <tr>
+                        <td><figure>
+                            <img src="../img/icon_6.png" title="icon 6">
+                            <figcaption>icon 6</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_7.png" title="icon 7">
+                            <figcaption>icon 7</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_8.png" title="icon 8">
+                            <figcaption>icon 8</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_9.png" title="icon 9">
+                            <figcaption>icon 9</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_10.png" title="icon 10">
+                            <figcaption>icon 10</figcaption>
+                        </figure></td>
+                    </tr>
+                    <tr>
+                        <td><figure>
+                            <img src="../img/icon_11.png" title="icon 11">
+                            <figcaption>icon 11</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_12.png" title="icon 12">
+                            <figcaption>icon 12</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_13.png" title="icon 13">
+                            <figcaption>icon 13</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_14.png" title="icon 14">
+                            <figcaption>icon 14</figcaption>
+                        </figure></td>
+                        <td><figure>
+                            <img src="../img/icon_15.png" title="icon 15">
+                            <figcaption>icon 15</figcaption>
+                        </figure></td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+            
     </main>
 
     <!--Подвал-->
