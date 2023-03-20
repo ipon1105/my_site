@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Тест по дисциплине</title>
+    <link rel="stylesheet" href="src/css/general.css">
+    <link rel="stylesheet" href="src/css/time.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="src/js/myValid.js" charset="utf-8"></script>
+    <script src="src/js/time.js" charset="utf-8"></script>
+    <script src="src/js/localStorage.js"></script>
+    <style>
+        .box {
+            margin-top: 10px;
+        }
+
+        .quest_box {
+            margin-top: 25px;
+        }
+
+        article {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Шапка-->
+    <header>
+        <div>
+            <div class="local-story">
+                <img src="src/img/icon_1.png">
+                <a href="History.html">История просмотра</a>
+            </div>
+            <h1 id="page">Тест по дисциплине</h1>
+            <!-- Навигация с гиперссылками -->
+            <nav>
+                <ul>
+                    <li onmouseover="document.getElementById('img_1').src='src/img/figure_01.png';"
+                        onmouseout="document.getElementById('img_1').src='src/img/figure_00.png';">
+                        <img id="img_1" src="src/img/figure_00.png" >
+                        <a href="MainPage.html">Главная страница</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_2').src='src/img/figure_02.png';"
+                        onmouseout="document.getElementById('img_2').src='src/img/figure_01.png';">
+                        <img id="img_2" src="src/img/figure_01.png">
+                        <a href="AboutMePage.html">Обо мне</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_3').src='src/img/figure_03.png';"
+                        onmouseout="document.getElementById('img_3').src='src/img/figure_02.png';"
+                        id="li_top_of_submenu" class="top_of_submenu">
+                        <img id="img_3" src="src/img/figure_02.png">
+                        <a>Мои интересы </a>
+                        <ul id="ul_submenu" class="submenu">
+                            <li><a href="MyInterestingPage.html#my_1">Моя любимая музыка</a></li>
+                            <li><a href="MyInterestingPage.html#my_2">Любимые выди спорта</a></li>
+                            <li><a href="MyInterestingPage.html#my_3">Мои любимые книги</a></li>
+                            <li><a href="MyInterestingPage.html#my_4">Мои любимые фильмы</a></li>
+                            <li><a href="MyInterestingPage.html#my_5">Моя любимая</a> </li>
+                        </ul>
+                    </li>
+                    <li onmouseover="document.getElementById('img_4').src='src/img/figure_04.png';"
+                        onmouseout="document.getElementById('img_4').src='src/img/figure_03.png';">
+                        <img id="img_4" src="src/img/figure_03.png">
+                        <a href="StudiesPage.html">Учёба</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_5').src='src/img/figure_05.png';"
+                        onmouseout="document.getElementById('img_5').src='src/img/figure_04.png';">
+                        <img id="img_5" src="src/img/figure_04.png">
+                        <a href="PhotoAlbomPage.html">Фотоальбом</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_6').src='src/img/figure_06.png';"
+                        onmouseout="document.getElementById('img_6').src='src/img/figure_05.png';">
+                        <img id="img_6" src="src/img/figure_05.png">
+                        <a href="ContactsPage.html">Контакт</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_7').src='src/img/figure_07.png';"
+                        onmouseout="document.getElementById('img_7').src='src/img/figure_07.png';">
+                        <img id="img_7" src="src/img/figure_07.png">
+                        <a href="TestPage.html">Тест по дисциплине</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Главное содержимое-->
+    <main>
+
+        <form id="form" action="mailto:my_world1105@mail.ru?subject=Тест по 'Чиленные методы в информатике'"
+            method="post">
+            <!-- Данные пользователя -->
+            <div>
+                <fieldset>
+                    <legend>Данные пользователя</legend>
+                    <div class="box">Ваше ФИО: <input id="fio_1" type="text" name="fio"
+                            placeholder="Коновалов Иван Викторович"></div>
+                    <div class="box">Ваша группа:
+                        <select name="Group">
+                            <option value="001">ПИ/Б-20-1-о</option>
+                            <option value="002">ИВТ/Б-20-1-о</option>
+                            <option value="003">ИВТ/Б-20-2-о</option>
+                            <option value="004">ПИН/Б-20-2-о</option>
+                            <option value="005">ИС/Б-20-2-о</option>
+                            <option value="006">УТС/Б-20-1-о</option>
+                            <option value="007">УТС/Б-20-2-о</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Ввод ответов -->
+            <div class="quest_box">
+                <fieldset>
+                    <legend>Тест по "Чиленные методы в информатике"</legend>
+
+                    <!-- Вопрос один, ответ Левые и Правые -->
+                    <article>
+                        <h4>Вопрос №1:</h4>
+                        Существующие и имеющие важное значение матричные степенные ряды это: <br>
+                        <div id="my_box" class="box">
+                            <label><input type="checkbox" name="check[]" value="check_1">Левые </label><br>
+                            <label><input type="checkbox" name="check[]" value="check_2">Правые</label><br>
+                            <label><input type="checkbox" name="check[]" value="check_3">Верние</label><br>
+                            <label><input type="checkbox" name="check[]" value="check_4">Нижние</label><br>
+                        </div>
+                    </article>
+
+                    <!-- Вопрос два, ответ Блочной -->
+                    <article>
+                        <h4>Вопрос №2:</h4>
+                        Матрица разбитая на клетки, называется клеточной и … <br>
+                        <div class="box">
+                            <select name="select">
+                                <option value="select_1">Окаймленной</option>
+                                <option value="select_2">Блочной</option>
+                                <option value="select_3">Равной</option>
+                                <option value="select_4">Квазидиагональной</option>
+                                <option value="select_5">Средней</option>
+                            </select>
+                        </div>
+                    </article>
+
+                    <!-- Вопрос три, ответ Треугольной -->
+                    <article>
+                        <h4>Вопрос №3:</h4>
+                        Если элементы квадратной матрицы, стоящие выше (ниже) главной диагонали, равны нулю, то матрицу
+                        называют: <br>
+                        <div class="box">
+                            <input id="input_1" type="text" name="input_1"><br>
+                        </div>
+                    </article>
+                </fieldset>
+            </div>
+
+            <div class="box">
+                <input id="send" type="submit" value="Отправить">
+                <input type="reset" value="Отчистить форму"><br>
+            </div>
+        </form>
+
+    </main>
+
+    <!--Подвал-->
+    <footer></footer>
+
+</body>
+
+</html>

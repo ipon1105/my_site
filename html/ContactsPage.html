@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Контакт</title>
+    <link rel="stylesheet" href="src/css/general.css">
+    <link rel="stylesheet" href="src/css/calendar.css">
+    <link rel="stylesheet" href="src/css/time.css">
+    <link rel="stylesheet" href="src/css/popper.css">
+    <link rel="stylesheet" href="src/css/modal.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="src/js/popper.js"></script>
+    <script src="src/js/time.js"></script>
+    <script src="src/js/calendar.js"></script>
+    <script src="src/js/contactFormValidate.js"></script>
+    <script src="src/js/localStorage.js"></script>
+    <style>
+        .box {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='modal' class="modal">
+        <div class="modal-window">
+            <div id="modal-content">
+                Вы уверены, что хотите отправить письмо?
+            <div id="downPanel">
+                <button id="prev" class="btn-prev">Нет</button>
+                <button id="next" class="btn-next">Да</button>
+            </div>
+            </div><br>
+            <button id='btn-close' class="btn-close">X</button>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    
+    <!--Шапка-->
+    <header>
+        <div>
+            <div class="local-story">
+                <img src="src/img/icon_1.png">
+                <a href="History.html">История просмотра</a>
+            </div>
+            <h1 id="page">Контакт</h1>
+
+            <!-- Навигация с гиперссылками -->
+            <nav>
+                <ul>
+                    <li onmouseover="document.getElementById('img_1').src='src/img/figure_01.png';"
+                        onmouseout="document.getElementById('img_1').src='src/img/figure_00.png';">
+                        <img id="img_1" src="src/img/figure_00.png" >
+                        <a href="MainPage.html">Главная страница</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_2').src='src/img/figure_02.png';"
+                        onmouseout="document.getElementById('img_2').src='src/img/figure_01.png';">
+                        <img id="img_2" src="src/img/figure_01.png">
+                        <a href="AboutMePage.html">Обо мне</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_3').src='src/img/figure_03.png';"
+                        onmouseout="document.getElementById('img_3').src='src/img/figure_02.png';"
+                        id="li_top_of_submenu" class="top_of_submenu">
+                        <img id="img_3" src="src/img/figure_02.png">
+                        <a>Мои интересы </a>
+                        <ul id="ul_submenu" class="submenu">
+                            <li><a href="MyInterestingPage.html#my_1">Моя любимая музыка</a></li>
+                            <li><a href="MyInterestingPage.html#my_2">Любимые выди спорта</a></li>
+                            <li><a href="MyInterestingPage.html#my_3">Мои любимые книги</a></li>
+                            <li><a href="MyInterestingPage.html#my_4">Мои любимые фильмы</a></li>
+                            <li><a href="MyInterestingPage.html#my_5">Моя любимая</a> </li>
+                        </ul>
+                    </li>
+                    <li onmouseover="document.getElementById('img_4').src='src/img/figure_04.png';"
+                        onmouseout="document.getElementById('img_4').src='src/img/figure_03.png';">
+                        <img id="img_4" src="src/img/figure_03.png">
+                        <a href="StudiesPage.html">Учёба</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_5').src='src/img/figure_05.png';"
+                        onmouseout="document.getElementById('img_5').src='src/img/figure_04.png';">
+                        <img id="img_5" src="src/img/figure_04.png">
+                        <a href="PhotoAlbomPage.html">Фотоальбом</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_6').src='src/img/figure_06.png';"
+                        onmouseout="document.getElementById('img_6').src='src/img/figure_06.png';">
+                        <img id="img_6" src="src/img/figure_06.png">
+                        <a href="ContactsPage.html">Контакт</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_7').src='src/img/figure_07.png';"
+                        onmouseout="document.getElementById('img_7').src='src/img/figure_06.png';">
+                        <img id="img_7" src="src/img/figure_06.png">
+                        <a href="TestPage.html">Тест по дисциплине</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Главное содержимое-->
+    <main>
+        <form id="form" action="mailto:my_world1105@mail.ru?subject=FeedBack" method="POST">
+            <fieldset>
+                <legend>Отправить нам письмо</legend>
+                <div class="box">
+                    <div class="helptip box" onmouseover="onPopover(this)" onmouseout="offPopover()">
+                        Ваше ФИО: 
+                        <input id="fio" type="text" name="fio" placeholder="Коновалов Иван Викторович" >
+                        <div class="Popover">Введите вашу Фамилию Имя и Отчество</div>
+                    <br>    
+                    <span id="fioerror" class="unvisible error">Неверное имя пользователя</span>
+                    
+                </div>
+                <div id="calendar-box" class="box">
+                    <div class="helptip" onmouseover="onPopover(this)" onmouseout="offPopover()">
+                        Дата рождения: <input id="my_date" type="text" name="date" placeholder="ММ/ДД/ГГГГ">
+                        <div class="Popover">Введите вашу дату рождения</div>
+                    </div>
+                    <br>
+                    <span id="dateerror" class="unvisible error">Неверная дата</span>
+
+                    <!-- Календарь -->
+                    <div id="calendar" class="calendar-none">
+                        <div class="calendar-top">
+                            <select class="calendar-month">
+                                <option name="calendar-month[]" value="M1" >Январь</option>
+                                <option name="calendar-month[]" value="M2" >Февраль</option>
+                                <option name="calendar-month[]" value="M3" >Март</option>
+                                <option name="calendar-month[]" value="M4" >Апрель</option>
+                                <option name="calendar-month[]" value="M5" >Май</option>
+                                <option name="calendar-month[]" value="M6" >Июнь</option>
+                                <option name="calendar-month[]" value="M7" >Июль</option>
+                                <option name="calendar-month[]" value="M8" >Август</option>
+                                <option name="calendar-month[]" value="M9" >Сентябрь</option>
+                                <option name="calendar-month[]" value="M10" >Октябрь</option>
+                                <option name="calendar-month[]" value="M12" >Ноябрь</option>
+                                <option name="calendar-month[]" value="M12" >Декабрь</option>
+                            </select>
+                            <select class="calendar-year">
+                                <option name="calendar-day[]" value="Y2004" >2004</option>
+                                <option name="calendar-day[]" value="Y2003" >2003</option>
+                                <option name="calendar-day[]" value="Y2002" >2002</option>
+                                <option name="calendar-day[]" value="Y2001" >2001</option>
+                                <option name="calendar-day[]" value="Y2000" >2000</option>
+                                <option name="calendar-day[]" value="Y1999" >1999</option>
+                                <option name="calendar-day[]" value="Y1998" >1998</option>
+                                <option name="calendar-day[]" value="Y1997" >1997</option>
+                                <option name="calendar-day[]" value="Y1996" >1996</option>
+                                <option name="calendar-day[]" value="Y1995" >1995</option>
+                                <option name="calendar-day[]" value="Y1994" >1994</option>
+                                <option name="calendar-day[]" value="Y1993" >1993</option>
+                                <option name="calendar-day[]" value="Y1992" >1992</option>
+                                <option name="calendar-day[]" value="Y1991" >1991</option>
+                                <option name="calendar-day[]" value="Y1990" >1990</option>
+                                <option name="calendar-day[]" value="Y1989" >1989</option>
+                                <option name="calendar-day[]" value="Y1988" >1988</option>
+                                <option name="calendar-day[]" value="Y1987" >1987</option>
+                                <option name="calendar-day[]" value="Y1986" >1986</option>
+                                <option name="calendar-day[]" value="Y1985" >1985</option>
+                                <option name="calendar-day[]" value="Y1984" >1984</option>
+                                <option name="calendar-day[]" value="Y1983" >1983</option>
+                                <option name="calendar-day[]" value="Y1982" >1982</option>
+                                <option name="calendar-day[]" value="Y1981" >1981</option>
+                                <option name="calendar-day[]" value="Y1980" >1980</option>
+                                <option name="calendar-day[]" value="Y1979" >1979</option>
+                                <option name="calendar-day[]" value="Y1978" >1978</option>
+                                <option name="calendar-day[]" value="Y1977" >1977</option>
+                                <option name="calendar-day[]" value="Y1976" >1976</option>
+                                <option name="calendar-day[]" value="Y1975" >1975</option>
+                                <option name="calendar-day[]" value="Y1974" >1974</option>
+                                <option name="calendar-day[]" value="Y1973" >1973</option>
+                                <option name="calendar-day[]" value="Y1972" >1972</option>
+                                <option name="calendar-day[]" value="Y1971" >1971</option>
+                                <option name="calendar-day[]" value="Y1970" >1970</option>
+                            </select>
+                        </div>
+                        <div class="calendar-days">
+
+                        </div>
+                    </div>
+
+                    <br>
+                </div>
+                <div class="box">
+                    <div class="helptip" onmouseover="onPopover(this)" onmouseout="offPopover()">
+                        Телефон: <input id="tel" type="tel" name="tel" placeholder="+78005553535"> 
+                        <div class="Popover">Введите ваш номер мобильного телефона</div>
+                    </div>
+                    <br>
+                    <span id="telerror" class="unvisible error">Неверный номер телефона</span>
+                </div>
+                <div class="box">
+                    Пол:
+                    <input type="radio" id="women" name="drone" value="Женский" checked>
+                    <label for="women">women</label>
+                    <input type="radio" id="man" name="drone" value="Мужской">
+                    <label for="man">man</label>
+                </div>
+                <div class="box">
+                    <div class="helptip" onmouseover="onPopover(this)" onmouseout="offPopover()">
+                        Email для связи: <input id="email" type="email" name="email" placeholder="адрес электронной почты">
+                        <div class="Popover">Введите ваш адрес электронной почты</div>
+                    </div>
+                    <span id="emailerror" class="unvisible error">Неверная почта</span>
+                    <br>
+                </div>
+                <div class="box">
+                    <select name="Old">
+                        <option value="0-14">меньше 14</option>
+                        <option value="14-18">от 14 до 18</option>
+                        <option value="18-27">от 18 до 27</option>
+                        <option value="27-45">от 27 до 45</option>
+                        <option value="45-69">от 45 до 69</option>
+                        <option value="69-100">от 69 и больше</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <input id="send" type="submit" value="Отправить">
+                    <input type="reset" value="Отчистить форму"> <br>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <!--Подвал-->
+    <footer></footer>
+
+</body>
+
+</html>

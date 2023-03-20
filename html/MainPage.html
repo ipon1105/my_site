@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="src/css/general.css">
+    <link rel="stylesheet" href="src/css/time.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="src/js/time.js"></script>
+    <script src="src/js/localStorage.js"></script>
+    <style>
+        img {
+            width: 30%;
+            height: 30%;
+            float: left;
+            border: 10px solid #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Шапка-->
+    <header>
+        <div>
+            <div class="local-story">
+                <img src="src/img/icon_1.png">
+                <a href="History.html">История просмотра</a>
+            </div>
+            <h1 id="page">Главная страница</h1>
+
+            <!-- Навигация с гиперссылками -->
+            <nav>
+                <ul>
+                    <li onmouseover="document.getElementById('img_1').src='src/img/figure_01.png';"
+                        onmouseout="document.getElementById('img_1').src='src/img/figure_01.png';">
+                        <img id="img_1" src="src/img/figure_01.png" >
+                        <a href="MainPage.html">Главная страница</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_2').src='src/img/figure_02.png';"
+                        onmouseout="document.getElementById('img_2').src='src/img/figure_01.png';">
+                        <img id="img_2" src="src/img/figure_01.png">
+                        <a href="AboutMePage.html">Обо мне</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_3').src='src/img/figure_03.png';"
+                        onmouseout="document.getElementById('img_3').src='src/img/figure_02.png';"
+                        id="li_top_of_submenu" class="top_of_submenu">
+                        <img id="img_3" src="src/img/figure_02.png">
+                        <a>Мои интересы </a>
+                        <ul id="ul_submenu" class="submenu">
+                            <li><a href="MyInterestingPage.html#my_1">Моя любимая музыка</a></li>
+                            <li><a href="MyInterestingPage.html#my_2">Любимые выди спорта</a></li>
+                            <li><a href="MyInterestingPage.html#my_3">Мои любимые книги</a></li>
+                            <li><a href="MyInterestingPage.html#my_4">Мои любимые фильмы</a></li>
+                            <li><a href="MyInterestingPage.html#my_5">Моя любимая</a> </li>
+                        </ul>
+                    </li>
+                    <li onmouseover="document.getElementById('img_4').src='src/img/figure_04.png';"
+                        onmouseout="document.getElementById('img_4').src='src/img/figure_03.png';">
+                        <img id="img_4" src="src/img/figure_03.png">
+                        <a href="StudiesPage.html">Учёба</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_5').src='src/img/figure_05.png';"
+                        onmouseout="document.getElementById('img_5').src='src/img/figure_04.png';">
+                        <img id="img_5" src="src/img/figure_04.png">
+                        <a href="PhotoAlbomPage.html">Фотоальбом</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_6').src='src/img/figure_06.png';"
+                        onmouseout="document.getElementById('img_6').src='src/img/figure_05.png';">
+                        <img id="img_6" src="src/img/figure_05.png">
+                        <a href="ContactsPage.html">Контакт</a>
+                    </li>
+                    <li onmouseover="document.getElementById('img_7').src='src/img/figure_07.png';"
+                        onmouseout="document.getElementById('img_7').src='src/img/figure_06.png';">
+                        <img id="img_7" src="src/img/figure_06.png">
+                        <a href="TestPage.html">Тест по дисциплине</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Главное содержимое-->
+    <main>
+        <div>
+            <img src="src/img/image_1.jpg" alt="Изображение меня">
+            <br>ФИО: Коновалов Иван Викторович.
+            <br>Группа: ПИ/Б-20-1-о.
+            <br>Лабораторная работа номер 1:
+            <br>Исследование возможностей язык разметки гипертекстов HTML и каскадных таблиц стилей CSS
+        </div>
+    </main>
+
+    <!--Подвал-->
+    <footer></footer>
+
+</body>
+
+</html>
